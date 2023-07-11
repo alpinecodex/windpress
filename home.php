@@ -8,7 +8,7 @@
   </div>
 </div>
 <main class="intro flex flex-col m-auto max-w-screen-lg p-6">
-  <section class=" contain">
+  <section class="contain grid md:grid-cols-3">
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
     <?php $cat = get_the_category(); $cat_link = get_category_link( $cat[0]->cat_ID ); ?>
