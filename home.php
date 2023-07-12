@@ -7,20 +7,20 @@
     </header>
   </div>
 </div>
-<main class="intro flex flex-col m-auto max-w-screen-lg p-6">
-  <section class="contain grid md:grid-cols-3">
+<main class="intro flex flex-col m-auto max-w-screen-lg p-6 transition-all">
+  <section class="contain grid md:grid-cols-3 gap-8">
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
     <?php $cat = get_the_category(); $cat_link = get_category_link( $cat[0]->cat_ID ); ?>
-    <div class="newsfeed flex flex-col gap-4">
-      <div class="thumbnail">
+    <div class="newsfeed flex flex-col">
+      <div class="thumbnail w-full">
         <a href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) {
 						the_post_thumbnail();
 						} else { ?>
           <img src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png" alt="<?php the_title(); ?>" />
           <?php } ?></a>
       </div>
-      <div class="snippet flex flex-col gap-4">
+      <div class="snippet flex flex-col gap-4 p-6 bg-slate-50 rounded-b-lg">
         <h2 class="text-xl font-semibold"=><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php echo '<p class="excerpt">' . get_the_excerpt() . '</p>'; ?>
         <div class="byline">

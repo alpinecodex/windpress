@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // Adds dynamic menus
 function mytheme_addmenus() {
@@ -14,7 +14,7 @@ add_action( 'init', 'mytheme_addmenus' );
 // Creates and resizes thumbnails
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 150, 79, true );
+	set_post_thumbnail_size( 400, 200, true );
 	add_image_size( 'single-post-thumbnail', 1200, 630 );
 }
 

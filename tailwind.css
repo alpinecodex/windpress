@@ -1,3 +1,168 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Manrope:400,500');
+
+html {
+  font-size: 100%;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Based on the Major Third Type Scale */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+/* Style Lists */
+
+ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ol ul,
+ul ol,
+ul ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+/* Style Links */
+
+a {
+  color: #3490dc;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+a:hover {
+  color: #2779bd;
+  border-bottom: #2779bd 1px solid;
+}
+
+/* Style Images */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style Tables */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #24292e;
+}
+
+th,
+td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  font-weight: 600;
+}
+
+/* Style Code */
+
+code {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+}
+
+pre {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  overflow-x: auto;
+}
+
+/* Style Blockquote */
+
+blockquote {
+  border-left: 0.25rem solid #dfe2e5;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+/* Style Horizontal Rule */
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #dfe2e5;
+  margin-bottom: 1rem;
+}
+
+/* Style Strong and Em Tags */
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
