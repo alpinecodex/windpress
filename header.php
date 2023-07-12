@@ -28,9 +28,9 @@ return $pageURL;
 </head>
 
 <body <?php body_class(); ?>>
-  <nav class="top bg-neutral-200 sticky top-8">
+  <nav class="top bg-slate-200 sticky top-8">
     <div class="flex justify-between p-6 max-w-screen-lg m-auto">
-      <div class=" logo"><a href="/"><?php bloginfo('name'); ?></a></div>
+      <div class="logo"><a href="/"><img src="/images/logo.png" alt="9d8 Logo"></a></div>
       <!-- Start mobile nav show and hide -->
       <div class="md:hidden">
         <label for=" show-menu" class="show-menu">&#9776;</label>

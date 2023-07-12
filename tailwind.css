@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css?family=Manrope:400,500');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap');
 
 html {
   font-size: 100%;
@@ -79,6 +80,10 @@ ol ol {
   margin-bottom: 0;
 }
 
+li {
+  margin-bottom: calc(1rem / 2);
+}
+
 /* Style Links */
 
 a {
@@ -122,7 +127,7 @@ th {
 /* Style Code */
 
 code {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.9rem;
   background-color: #f3f4f6;
   padding: 0.2rem 0.4rem;
