@@ -542,9 +542,21 @@ video {
   margin: auto;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .block {
@@ -639,6 +651,10 @@ video {
 .text-neutral-800 {
   --tw-text-opacity: 1;
   color: rgb(38 38 38 / var(--tw-text-opacity));
+}
+
+.no-underline {
+  text-decoration-line: none;
 }
 
 .transition-all {

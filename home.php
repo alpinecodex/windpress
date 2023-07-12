@@ -21,10 +21,10 @@
           <?php } ?></a>
       </div>
       <div class="snippet flex flex-col gap-4 p-6 bg-slate-50 rounded-b-lg">
-        <h2 class="text-xl font-semibold"=><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 class="text-xl m-0 font-semibold"=><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php echo '<p class="excerpt">' . get_the_excerpt() . '</p>'; ?>
         <div class="byline">
-          <p class="author"><a href="<?php echo $cat_link ?>"
+          <p class="author mb-0"><a href=" <?php echo $cat_link ?>"
               class="tag <?php echo get_the_category( $id )[0]->slug; ?>"><?php echo get_the_category( $id )[0]->name; ?></a>
             <span>|</span> <time datetime="<?php the_time('c'); ?>"><?php the_time('m/j/Y g:ia'); ?></time>
           </p>
