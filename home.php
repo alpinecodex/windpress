@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <div class="intro flex flex-col m-auto max-w-screen-lg p-6">
   <div class="contain">
-    <header class="flex flex-col gap-4">
-      <h1 class="text-neutral-800 text-4xl"><a href="https://9d8.dev">9d8</a> Tailwind X Wordpress Starter Theme</h1>
+    <header class="flex flex-col gap-4 mt-12">
+      <h1 class="text-neutral-800 text-5xl"><a href="https://9d8.dev">9d8</a> Tailwind X Wordpress Starter Theme</h1>
       <p>You can change this text in the <code>head.php</code> file in the theme folder.</p>
     </header>
   </div>
@@ -21,7 +21,7 @@
           <?php } ?></a>
       </div>
       <div class="snippet flex flex-col gap-4 p-6 bg-slate-50 rounded-b-lg">
-        <h2 class="text-xl m-0 font-semibold"=><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 class="text-xl m-0 font-semibold"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php echo '<p class="excerpt">' . get_the_excerpt() . '</p>'; ?>
         <div class="byline">
           <p class="author mb-0"><a href=" <?php echo $cat_link ?>"
