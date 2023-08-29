@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-		<main>
+		<main class="max-w-screen-lg m-auto p-6">
 			<article class="contain">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<header>

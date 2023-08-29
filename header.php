@@ -12,6 +12,7 @@ $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 return $pageURL;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -28,12 +29,13 @@ return $pageURL;
 </head>
 
 <body <?php body_class(); ?>>
-  <nav class="top bg-slate-200 bg-opacity-90 sticky top-8">
-    <div class="flex justify-between p-6 max-w-screen-lg m-auto">
-      <div class="logo"><a href="/"><img src="/images/logo.png" alt="9d8 Logo"></a></div>
+  <nav class="top-0 bg-slate-200 bg-opacity-90 sticky ">
+    <div class="flex justify-between items-center p-6 max-w-screen-lg m-auto">
+      <!-- Site Logo -->
+      <a href="/"><img class="w-36" src=" <?php bloginfo('template_directory'); ?>/public/logo.png" alt="9d8 Logo"></a>
       <!-- Start mobile nav show and hide -->
       <div class="md:hidden">
-        <label for=" show-menu" class="show-menu">&#9776;</label>
+        <label for="show-menu" class="show-menu">&#9776;</label>
         <input type="checkbox" id="show-menu" role="button">
       </div>
       <!-- End mobile nav show and hide -->
