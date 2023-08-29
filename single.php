@@ -1,40 +1,45 @@
 <?php get_header(); ?>
-<main>
-  <article class="contain prose m-auto max-w-screen-lg p-6 transition-all">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php $cat = get_the_category(); $cat_link = get_category_link( $cat[0]->cat_ID ); ?>
-    <header>
-      <h1><?php the_title(); ?></h1>
-      <?php echo '<p>' . get_the_excerpt() . '</p>'; ?>
-    </header>
-    <div class=" byline">
-      <p class="author"><a rel="author" class="person"
-          href="<?php echo get_the_author_meta('user_url'); ?>"><?php the_author(); ?></a> <span>|</span> <time
-          datetime="<?php the_time('c'); ?>"><?php the_time('m/j/Y'); ?> <?php the_time('g:ia'); ?></time>
-        <span>|</span> <a href="<?php echo $cat_link ?>"
-          class="<?php echo get_the_category( $id )[0]->slug; ?>"><?php echo get_the_category( $id )[0]->name; ?></a>
-      </p>
-    </div>
+<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
+    <article class="contain">
+        <?php if (have_posts()) : while (have_posts()) :
+            the_post(); ?>
+            <?php $cat = get_the_category();
+            $cat_link = get_category_link($cat[0]->cat_ID); ?>
 
-    <section class="max-w-screen-md my-12">
-      <?php the_content(); ?>
-    </section>
 
-    <div class="about">
-      <div class="gravatar">
-        <?php echo get_avatar( get_the_author_meta( 'ID' ), 120); ?>
-      </div>
-      <div class="bio">
-        <p><a rel="author" class="person"
-            href="<?php echo get_the_author_meta('user_url'); ?>"><?php the_author(); ?></a></p>
-        <p><small><?php echo get_the_author_meta('description'); ?></small></p>
-      </div>
-    </div>
-    <?php //comments_template(); ?>
-    <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
-    <?php endwhile; else: ?>
-    <h1>No Post</h1>
-    <?php endif; ?>
-  </article>
+            <div class="flex flex-col gap-8"><?php if (has_post_thumbnail()) {
+                    the_post_thumbnail('full', array('class' => 'w-full max-h-96 object-cover object-center rounded-lg'));
+                } else { ?>
+                    <img class="w-full h-full"
+                         src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png"
+                         alt="<?php the_title(); ?>"/>
+                <?php } ?>
+
+                <header>
+                    <h1 class="font-medium mb-0"><?php the_title(); ?></h1>
+                </header>
+
+                <div class="">
+                    <p class="m-0">
+                        <time
+                                datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
+                        <span>|</span> <a href="<?php echo $cat_link ?>"
+                                          class="<?php echo get_the_category($id)[0]->slug; ?>"><?php echo get_the_category($id)[0]->name; ?></a>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="my-12"/>
+
+            <section
+                    class="my-12 prose prose-slate md:prose-lg lg:prose-xl prose-img:rounded-lg prose-headings:font-medium prose-a:text-blue-600">
+                <?php the_content(); ?>
+            </section>
+
+
+        <?php endwhile; else: ?>
+            <h1>No Post</h1>
+        <?php endif; ?>
+    </article>
 </main>
 <?php get_footer(); ?>
