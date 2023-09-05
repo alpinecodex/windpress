@@ -6,17 +6,18 @@
     <?php $cat = get_the_category();
             $cat_link = get_category_link($cat[0]->cat_ID); ?>
 
+    <header>
+      <h1 class="font-medium mb-8"><?php the_title(); ?></h1>
+    </header>
 
     <div class="flex flex-col gap-8"><?php if (has_post_thumbnail()) {
-                    the_post_thumbnail('full', array('class' => 'w-full max-h-96 object-cover object-center rounded-lg'));
+                    the_post_thumbnail('full', array('class' => 'w-full h-[480px] object-cover object-center'));
                 } else { ?>
       <img class="w-full h-full" src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png"
         alt="<?php the_title(); ?>" />
       <?php } ?>
 
-      <header>
-        <h1 class="font-medium mb-0"><?php the_title(); ?></h1>
-      </header>
+
 
       <div class="">
         <p class="m-0">

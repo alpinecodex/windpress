@@ -29,10 +29,11 @@ return $pageURL;
 </head>
 
 <body <?php body_class(); ?>>
-  <nav class="top-0 bg-slate-200 sticky z-50">
+  <nav class="top-0 bg-blue-200 sticky z-50 shadow-sm">
     <div class="flex justify-between items-center p-6 max-w-screen-lg m-auto">
       <!-- Site Logo -->
-      <a href="/"><img class="w-36" src=" <?php bloginfo('template_directory'); ?>/public/logo.png" alt="9d8 Logo"></a>
+      <a href="/"><img class="w-36" src=" <?php bloginfo('template_directory'); ?>/public/windpress.png"
+          alt="9d8 Logo"></a>
       <!-- Start mobile nav show and hide -->
       <div class="md:hidden">
         <label for="show-menu" class="show-menu">&#9776;</label>
@@ -40,5 +41,8 @@ return $pageURL;
       </div>
       <!-- End mobile nav show and hide -->
       <?php wp_nav_menu( array('menu' => 'Main Nav' )); ?>
+      <a class=" bg-blue-600">
+        Get Started
+      </a>
     </div>
   </nav>

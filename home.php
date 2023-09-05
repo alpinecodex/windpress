@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
-<section class="bg-slate-200">
+<section class="bg-blue-200">
   <!--  Hero Section  -->
   <div class="contain flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
     <header class="flex flex-col gap-4">
       <img src="/public/logo.png" alt="">
-      <h1 class="text-neutral-800 text-5xl">Tailwind X Wordpress Starter Theme</h1>
-      <p>You can change this text in the <code>head.php</code> file in the theme folder.</p>
+      <h1 class="text-blue-800 text-5xl">Windpress Starter Theme</h1>
+      <p>Tailwind X Wordpress Starter Theme created by Bridger Tower and Cameron Youngblood. You can change this text in
+        the <code>head.php</code> file in the theme
+        folder.</p>
     </header>
   </div>
 </section>
