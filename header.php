@@ -29,7 +29,7 @@ return $pageURL;
 </head>
 
 <body <?php body_class(); ?>>
-  <nav class="top-0 bg-slate-200 bg-opacity-90 sticky ">
+  <nav class="top-0 bg-slate-200 sticky z-50">
     <div class="flex justify-between items-center p-6 max-w-screen-lg m-auto">
       <!-- Site Logo -->
       <a href="/"><img class="w-36" src=" <?php bloginfo('template_directory'); ?>/public/logo.png" alt="9d8 Logo"></a>

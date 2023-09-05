@@ -40,4 +40,4 @@
     <?php endif; ?>
   </article>
 </main>
-<?php get_footer(); ?>z
+<?php get_footer(); ?>

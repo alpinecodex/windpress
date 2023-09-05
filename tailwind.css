@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope:400,500');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css?family=Manrope:400,500');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap');
 
 html {
     font-size: 100%;
@@ -81,20 +81,6 @@ ol ol {
 
 article li {
     margin-bottom: calc(1rem / 2);
-}
-
-/* Style Links */
-
-a {
-    color: #3490dc;
-    text-decoration: none;
-    transition: text-decoration 0.5s ease-in-out;
-}
-
-a:hover {
-    color: #2779bd;
-    text-decoration: underline;
-    text-underline-offset: .25rem;
 }
 
 /* Style Tables */
