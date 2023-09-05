@@ -35,7 +35,7 @@
     while ($recent_posts->have_posts()) : $recent_posts->the_post();
   ?>
     <a href="<?php the_permalink(); ?>" class="group">
-      <div class="w-full overflow-hidden">
+      <div class="w-full flex gap-12 overflow-hidden">
         <!-- Image -->
         <div class="relative w-full object-cover object-center group">
           <?php if (has_post_thumbnail()) {
@@ -55,11 +55,13 @@
         </div>
 
         <!-- Category and Title -->
-        <div class="snippet flex flex-col gap-4 pt-4">
+        <div class="snippet flex flex-col gap-4 pt-4 max-w-1/2">
           <h2 class="text-4xl m-0 font-medium group-hover:underline underline-offset-4"><?php the_title(); ?></h2>
+          <p class="text-gray-600"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
           <time class="uppercase text-sm hover:no-underline"
             datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
         </div>
+
       </div>
     </a>
     <?php
@@ -75,17 +77,22 @@
   </section>
 
   <!-- Email Section -->
-  <section class="contain flex justify-between bg-blue-100 p-8">
+  <section class="contain flex gap-12 justify-between border border-dashed p-8">
     <div class="my-0">
       <h2 class="text-2xl mt-0 font-medium mb-4">Subscribe to Our Free Newsletter</h2>
-      <p class="text-gray-600">Stay up-to-date with our latest news and updates.</p>
+      <p class="text-gray-600 mb-0">Stay up-to-date with our latest news and updates by signing up for the email
+        newsletter.
+      </p>
     </div>
-    <form class="flex h-fit" action="your-submission-handler.php" method="post">
-      <input type="email" name="email" placeholder="Enter your email" required
-        class="border px-4 py-2 focus:outline-none focus:ring focus:border-blue-300">
-      <button type="submit"
-        class="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
-    </form>
+    <div>
+      <form class="flex h-fit" action="your-submission-handler.php" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required
+          class="border px-4 py-2 focus:outline-none focus:ring focus:border-blue-300">
+        <button type="submit"
+          class="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
+      </form>
+      <small class="block ml-1 mt-2 text-neutral-400">No Spam, Ever.</small>
+    </div>
   </section>
 
 
