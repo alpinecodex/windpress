@@ -74,8 +74,21 @@
   ?>
   </section>
 
+  <!-- Email Section -->
+  <section class="contain flex justify-between bg-blue-100 p-8">
+    <div class="my-0">
+      <h2 class="text-2xl mt-0 font-medium mb-4">Subscribe to Our Free Newsletter</h2>
+      <p class="text-gray-600">Stay up-to-date with our latest news and updates.</p>
+    </div>
+    <form class="flex h-fit" action="your-submission-handler.php" method="post">
+      <input type="email" name="email" placeholder="Enter your email" required
+        class="border px-4 py-2 focus:outline-none focus:ring focus:border-blue-300">
+      <button type="submit"
+        class="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
+    </form>
+  </section>
 
-  <!-- Posts Section -->
+
   <!-- Posts Section -->
   <section class="contain grid md:grid-cols-2 lg:grid-cols-3 gap-8">
     <?php
