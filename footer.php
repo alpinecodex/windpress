@@ -52,7 +52,7 @@
 <script>
     // JavaScript to handle mobile menu toggle and close on outside click
     document.addEventListener("DOMContentLoaded", function() {
-        const showMenuButton = document.getElementById("show-menu");
+        const showMenuButton = document.getElementById("show-menu-mobile");
         const mobileMenu = document.querySelector(".mobile-menu");
 
         showMenuButton.addEventListener("click", function() {
