@@ -18,7 +18,6 @@
 
 <main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
 
-
     <!-- Most Recent Post Section -->
     <section class="contain">
         <?php

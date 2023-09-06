@@ -1,6 +1,6 @@
-# Windpress Tailwind and WordPress Starter Theme
+# WindPress Tailwind and WordPress Starter Theme
 
-Welcome to Windpress, a lightweight, modern, and performance-centric WordPress theme. It has been crafted using the utility-first CSS framework, TailwindCSS, and is built on [CoyWolf's Starter Theme](https://coywolf.pro/webdev/wordpress-starter-theme/). This theme is perfect for those who want a sleek and modern design, combined with the flexibility and power of WordPress.
+Welcome to Windpress, a lightweight, modern, and performance-centric WordPress theme. It has been crafted using the utility-first CSS framework, TailwindCSS, and is built on [Coywolf's Starter Theme](https://coywolf.pro/webdev/wordpress-starter-theme/). This theme is perfect for those who want a sleek and modern design, combined with the flexibility and power of WordPress.
 
 ## 🚀 Getting Started
 
@@ -32,7 +32,7 @@ Welcome to Windpress, a lightweight, modern, and performance-centric WordPress t
     - Boot up your local WordPress development server.
     - Log in to your WordPress dashboard.
     - Navigate to **Appearance** > **Themes**.
-    - Find "Windpress" (or your chosen name) and activate it.
+    - Find "WindPress" (or your chosen name) and activate it.
 
 4. **Build the CSS**:
     With the theme activated, and while still inside the theme's directory, build the CSS to see the changes:
