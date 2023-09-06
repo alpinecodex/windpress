@@ -42,7 +42,7 @@ function curPageURL()
                 <a href="/"><img class="w-36" src="<?php bloginfo('template_directory'); ?>/public/windpress.png" alt="Windpress Logo"></a>
 
                 <!-- Mobile Menu -->
-                <div class="md:hidden p-0">
+                <div class="block md:hidden p-0">
                     <label for="show-menu-mobile" class="show-menu block cursor-pointer p-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
