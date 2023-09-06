@@ -2,7 +2,7 @@
 
 <section class="bg-blue-200">
     <!-- Hero Section -->
-    <div class="contain flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
+    <div class="contain flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-12 md:py-24">
         <header class="flex flex-col gap-4">
             <?php $logo_url = get_theme_mod('custom_logo'); // Retrieve the logo URL
             ?>
@@ -10,14 +10,13 @@
                 <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>">
             <?php endif; ?>
 
-            <h1 class="text-blue-900 text-6xl"><?php bloginfo('name'); ?></h1>
-            <h2 class="text-xl lg:max-w-3/4 my-0"><?php bloginfo('description'); ?></h2>
+            <h1 class="text-blue-900 text-4xl md:text-6xl"><?php bloginfo('name'); ?></h1>
+            <h2 class="text-lg md:text-xl lg:max-w-3/4 my-0"><?php bloginfo('description'); ?></h2>
         </header>
     </div>
 </section>
 
-<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
-
+<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-12 md:py-24">
     <!-- Most Recent Post Section -->
     <section class="contain">
         <?php
@@ -34,9 +33,9 @@
             while ($recent_posts->have_posts()) : $recent_posts->the_post();
         ?>
                 <a href="<?php the_permalink(); ?>" class="group">
-                    <div class="w-full flex gap-12">
+                    <div class="w-full md:flex gap-12">
                         <!-- Image -->
-                        <div class="relative w-full object-cover object-center group">
+                        <div class="relative w-full object-cover object-center group mb-4">
                             <?php if (has_post_thumbnail()) {
                                 the_post_thumbnail('full', array('class' => 'w-full h-96 object-cover'));
                             } else { ?>
@@ -72,17 +71,17 @@
     </section>
 
     <!-- Email Section -->
-    <section class="contain flex gap-12 justify-between border border-blue-300 border-dashed p-8">
+    <section class="contain lg:flex gap-12 justify-between border border-blue-300 border-dashed p-4 md:p-8">
         <div class="my-0">
             <h2 class="text-2xl mt-0 font-medium mb-4">Subscribe to Our Free Newsletter</h2>
             <p class="text-gray-600 mb-0">Stay up-to-date with our latest news and updates by signing up for the email
                 newsletter.
             </p>
         </div>
-        <div>
-            <form class="flex h-fit" action="your-submission-handler.php" method="post">
-                <input type="email" name="email" placeholder="Enter your email" required class="border px-4 py-2 focus:outline-none focus:ring focus:border-blue-300">
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
+        <div class="mt-6 lg:mt-0">
+            <form class="md:flex h-fit max-w-full" action="your-submission-handler.php" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required class="border px-4 py-2 w-full focus:outline-none focus:ring focus:border-blue-300 mb-2 md:mb-0 md:w-64">
+                <button type="submit" class="bg-blue-500 w-full text-white px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 md:w-36">Subscribe</button>
             </form>
             <small class="block ml-1 mt-2 text-neutral-400">No Spam, Ever.</small>
         </div>
@@ -149,7 +148,7 @@
     <section class="category-section">
         <div class="container mx-auto">
             <h2 class="text-3xl font-semibold mb-8">Explore Categories</h2>
-            <ul class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <?php
                 $categories = get_categories();
 
@@ -160,7 +159,7 @@
                 ?>
                     <li class="border p-4 hover:bg-blue-100">
                         <a class="w-full h-full" href="<?php echo esc_url($category_link); ?>">
-                            <h3 class="text-xl mt-2 font-semibold">
+                            <h3 class="text-lg md:text-xl mt-2 font-semibold">
                                 <?php echo $category_name; ?>
 
                             </h3>

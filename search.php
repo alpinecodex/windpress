@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
+<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-12 md:py-24">
     <section class="contain">
         <header>
             <h1>Search Results</h1>

@@ -17,7 +17,7 @@ function curPageURL()
 ?>
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="max-w-screen">
 
 <head>
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -33,7 +33,7 @@ function curPageURL()
 </head>
 
 <body <?php body_class(); ?>>
-    <nav class="top-0 bg-blue-200 sticky z-50 shadow-sm">
+    <nav class="top-0 bg-blue-200 sticky z-50">
         <div class="flex justify-between items-center p-6 max-w-screen-lg m-auto">
             <!-- Site Logo -->
             <a href="/"><img class="w-36" src=" <?php bloginfo('template_directory'); ?>/public/windpress.png" alt="Windpress Logo"></a>
@@ -43,14 +43,14 @@ function curPageURL()
                 <input type="checkbox" id="show-menu" role="button">
             </div>
             <!-- End mobile nav show and hide -->
-            <div class="flex gap-4 items-center">
+            <div class="hidden md:block flex gap-4 items-center">
                 <?php
                 wp_nav_menu(array(
                     'menu' => 'Main Nav',
                     'container' => 'ul',
                     'menu_class' => 'flex space-x-4 underline underline-offset-4',
                 ));
-                ?> <a href="https://alpinecodex.com/" class="px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                ?> <a href="https://alpinecodex.com/" class="hidden md:block px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
                     Download Now
                 </a>
             </div>
