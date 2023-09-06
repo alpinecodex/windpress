@@ -22,6 +22,7 @@ function curPageURL()
 <head>
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <style>
 		<?php include_once('app.css.php'); //CSS is inline and saved in a PHP file so you can include and exclude styles based on conditions
