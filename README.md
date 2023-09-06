@@ -1,6 +1,6 @@
 # Windpress Tailwind and WordPress Starter Theme
 
-Welcome to Windpress, a lightweight, modern, and performance-centric WordPress theme. It has been crafted using the utility-first CSS framework, TailwindCSS, and draws inspiration from [CoyWolf's Starter Theme](https://coywolf.pro/webdev/wordpress-starter-theme/). This theme is perfect for those who want a sleek and modern design, combined with the flexibility and power of WordPress.
+Welcome to Windpress, a lightweight, modern, and performance-centric WordPress theme. It has been crafted using the utility-first CSS framework, TailwindCSS, and is built on [CoyWolf's Starter Theme](https://coywolf.pro/webdev/wordpress-starter-theme/). This theme is perfect for those who want a sleek and modern design, combined with the flexibility and power of WordPress.
 
 ## 🚀 Getting Started
 
