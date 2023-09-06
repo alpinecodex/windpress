@@ -43,7 +43,7 @@ function curPageURL()
                 <input type="checkbox" id="show-menu" role="button">
             </div>
             <!-- End mobile nav show and hide -->
-            <div class="hidden md:block flex gap-4 items-center">
+            <div class="hidden md:flex gap-4 items-center">
                 <?php
                 wp_nav_menu(array(
                     'menu' => 'Main Nav',
