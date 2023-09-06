@@ -38,37 +38,44 @@ function curPageURL()
         <div class="flex justify-between items-center p-6 max-w-screen-lg m-auto">
             <!-- Site Logo -->
             <a href="/"><img class="w-36" src="<?php bloginfo('template_directory'); ?>/public/windpress.png" alt="Windpress Logo"></a>
+
             <!-- Mobile Menu -->
-            <div class="md:hidden">
-                <input type="checkbox" id="show-menu" role="button" class="hidden" checked> <!-- Add the "checked" attribute -->
-                <label for="show-menu" class="show-menu block cursor-pointer text-2xl">&#9776;</label>
-                <div class="mobile-menu md:hidden absolute top-0 left-0 bg-blue-100 h-screen w-64 transform translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto">
+            <div class="md:hidden p-0">
+                <label for="show-menu" class="show-menu block cursor-pointer text-2xl p-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </label>
+                <button id="show-menu" role="button" class="sr-only p-0">Toggle Menu</button>
+                <div class="mobile-menu md:hidden absolute top-0 left-0 bg-blue-100 h-screen w-64 transform translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto" style="display: none;">
                     <div class="p-8 space-y-4">
-                        <?php
-                        wp_nav_menu(array(
-                            'menu' => 'Main Nav',
-                            'container' => 'ul',
-                            'menu_class' => 'flex flex-col space-y-2',
-                        ));
-                        ?>
-                        <a href="https://alpinecodex.com/" class="block px-4 py-2 bg-blue-600 hover:bg-blue-900 text-white">
-                            Download Now
-                        </a>
+                        <a href="/"><img class="w-36" src="<?php bloginfo('template_directory'); ?>/public/windpress.png" alt="Windpress Logo"></a>
+                        <div class="py-8">
+                            <?php
+                            wp_nav_menu(array(
+                                'menu' => 'Main Nav',
+                                'container' => 'ul',
+                                'menu_class' => 'flex flex-col space-y-2',
+                            ));
+                            ?>
+                            <a href="https://alpinecodex.com/" class="block mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                                Download Now
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- End Mobile Menu -->
+                <!-- End Mobile Menu -->
 
-            <div class="hidden md:flex gap-4 items-center">
-                <?php
-                wp_nav_menu(array(
-                    'menu' => 'Main Nav',
-                    'container' => 'ul',
-                    'menu_class' => 'flex space-x-4 underline underline-offset-4',
-                ));
-                ?> <a href="https://alpinecodex.com/" class="hidden md:block px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
-                    Download Now
-                </a>
+                <div class="hidden md:flex gap-4 items-center">
+                    <?php
+                    wp_nav_menu(array(
+                        'menu' => 'Main Nav',
+                        'container' => 'ul',
+                        'menu_class' => 'flex space-x-4 underline underline-offset-4',
+                    ));
+                    ?> <a href="https://alpinecodex.com/" class="hidden md:block px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                        Download Now
+                    </a>
+                </div>
             </div>
-        </div>
     </nav>

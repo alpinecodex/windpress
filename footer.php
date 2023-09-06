@@ -50,20 +50,28 @@
 <?php endif; ?>
 
 <script>
-    // JavaScript to handle mobile menu toggle
+    // JavaScript to handle mobile menu toggle and close on outside click
     document.addEventListener("DOMContentLoaded", function() {
-        const showMenu = document.getElementById("show-menu");
+        const showMenuButton = document.getElementById("show-menu");
         const mobileMenu = document.querySelector(".mobile-menu");
 
-        showMenu.addEventListener("change", function() {
-            if (showMenu.checked) {
-                mobileMenu.style.display = "block";
+        showMenuButton.addEventListener("click", function() {
+            if (mobileMenu.style.display === "block") {
+                mobileMenu.style.display = "none";
             } else {
+                mobileMenu.style.display = "block";
+            }
+        });
+
+        // Add event listener to close mobile menu on outside click
+        document.addEventListener("click", function(event) {
+            if (!mobileMenu.contains(event.target) && event.target !== showMenuButton) {
                 mobileMenu.style.display = "none";
             }
         });
     });
 </script>
+
 </body>
 
 </html>
