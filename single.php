@@ -21,7 +21,7 @@
                     <div class="">
                         <p class="m-0">
                             <time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
-                            <span>|</span> <a href="<?php echo $cat_link ?>" class="<?php echo get_the_category($id)[0]->slug; ?>"><?php echo get_the_category($id)[0]->name; ?></a>
+                            <span>|</span> <a href="<?php echo $cat_link ?>" class="underline underline-offset-4 <?php echo get_the_category($id)[0]->slug; ?>"><?php echo get_the_category($id)[0]->name; ?></a>
                         </p>
                     </div>
                 </div>

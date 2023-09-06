@@ -50,8 +50,8 @@ function curPageURL()
                     'container' => 'ul',
                     'menu_class' => 'flex space-x-4 underline underline-offset-4',
                 ));
-                ?> <a href=" /" class="px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
-                    Subscribe
+                ?> <a href="https://alpinecodex.com/" class="px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                    Download Now
                 </a>
             </div>
         </div>

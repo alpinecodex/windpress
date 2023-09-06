@@ -72,7 +72,7 @@
     </section>
 
     <!-- Email Section -->
-    <section class="contain flex gap-12 justify-between border border-dashed p-8">
+    <section class="contain flex gap-12 justify-between border border-blue-300 border-dashed p-8">
         <div class="my-0">
             <h2 class="text-2xl mt-0 font-medium mb-4">Subscribe to Our Free Newsletter</h2>
             <p class="text-gray-600 mb-0">Stay up-to-date with our latest news and updates by signing up for the email
