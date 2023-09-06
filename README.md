@@ -77,6 +77,7 @@ A huge thanks to the creative minds behind Windpress:
 - [Alpine Codex](https://alpinecodex.com)
 - [Bridger Tower](https://bridger.cc)
 - [Cameron Youngblood](https://cameronyoungblood.com)
+- [Jon Henshaw](https://coywolf.com)
 
 ## 📝 License
 
