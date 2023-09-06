@@ -40,14 +40,16 @@ return $pageURL;
         <input type="checkbox" id="show-menu" role="button">
       </div>
       <!-- End mobile nav show and hide -->
-      <?php
-            wp_nav_menu(array(
-              'menu' => 'Main Nav',
-              'container' => 'ul',
-              'menu_class' => 'flex space-x-4 underline underline-offset-4',
-            ));
-          ?> <a href="/" class="px-4 py-2 bg-blue-600 hover:bg-blue-900 text-white">
-        Get Started
-      </a>
+      <div class="flex gap-4 items-center">
+        <?php
+              wp_nav_menu(array(
+                'menu' => 'Main Nav',
+                'container' => 'ul',
+                'menu_class' => 'flex space-x-4 underline underline-offset-4',
+              ));
+            ?> <a href=" /" class="px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+          Subscribe
+        </a>
+      </div>
     </div>
   </nav>

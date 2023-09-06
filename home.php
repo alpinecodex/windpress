@@ -22,27 +22,27 @@
   <!-- Most Recent Post Section -->
   <section class="contain">
     <?php
-  $args = array(
-    'posts_per_page' => 1,  // Display only one post
-    'post_status'    => 'publish',
-    'orderby'        => 'date',
-    'order'          => 'DESC',
-  );
+        $args = array(
+            'posts_per_page' => 1,  // Display only one post
+            'post_status'    => 'publish',
+            'orderby'        => 'date',
+            'order'          => 'DESC',
+        );
 
-  $recent_posts = new WP_Query($args);
+        $recent_posts = new WP_Query($args);
 
-  if ($recent_posts->have_posts()) :
-    while ($recent_posts->have_posts()) : $recent_posts->the_post();
-  ?>
+        if ($recent_posts->have_posts()) :
+            while ($recent_posts->have_posts()) : $recent_posts->the_post();
+        ?>
     <a href="<?php the_permalink(); ?>" class="group">
-      <div class="w-full flex gap-12 overflow-hidden">
+      <div class="w-full flex gap-12">
         <!-- Image -->
         <div class="relative w-full object-cover object-center group">
           <?php if (has_post_thumbnail()) {
-              the_post_thumbnail('full', array('class' => 'w-full h-96 object-cover'));
-            } else { ?>
-          <img class="w-full h-full" src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png"
-            alt="<?php the_title(); ?>" />
+                                the_post_thumbnail('full', array('class' => 'w-full h-96 object-cover'));
+                            } else { ?>
+          <img class="w-full h-full lg:w-[500px]"
+            src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png" alt="<?php the_title(); ?>" />
           <?php } ?>
           <div
             class="w-full z-10 h-full overflow-hidden group-hover:flex items-center justify-center hidden absolute top-0 bg-black bg-opacity-25">
@@ -65,15 +65,15 @@
       </div>
     </a>
     <?php
-    endwhile;
-  else :
-  ?>
+            endwhile;
+        else :
+            ?>
     <h2 class="center">Not Found</h2>
     <p>Sorry, but you are looking for something that isn't here.</p>
     <?php
-  endif;
-  wp_reset_postdata();  // Reset the post data to the main query
-  ?>
+        endif;
+        wp_reset_postdata();  // Reset the post data to the main query
+        ?>
   </section>
 
   <!-- Email Section -->
@@ -97,20 +97,20 @@
 
 
   <!-- Posts Section -->
-  <section class="contain grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <section class="relative grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16">
     <?php
-  $post_counter = 0;  // Initialize the counter
-  if (have_posts()) :
-    while (have_posts()) : the_post();
-      $cat = get_the_category();
-      $cat_link = get_category_link($cat[0]->cat_ID);
+        $post_counter = 0;  // Initialize the counter
+        if (have_posts()) :
+            while (have_posts()) : the_post();
+                $cat = get_the_category();
+                $cat_link = get_category_link($cat[0]->cat_ID);
 
-      // Skip the first post (most recent)
-      if ($post_counter === 0) {
-        $post_counter++;
-        continue;
-      }
-  ?>
+                // Skip the first post (most recent)
+                if ($post_counter === 0) {
+                    $post_counter++;
+                    continue;
+                }
+        ?>
 
     <a href="<?php the_permalink(); ?>" class="group">
       <div class=" w-full overflow-hidden">
@@ -144,9 +144,11 @@
 
 
     <?php endwhile; ?>
-    <nav class="pagination">
-      <div class="older"><?php next_posts_link('&lt; Older Entries') ?></div>
-      <div class="newer"><?php previous_posts_link('Newer Entries &gt;') ?></div>
+    <nav class="pagination mt-8 absolute bottom-0">
+      <div class="older underline underline-offset-4 hover:opacity-50"><?php next_posts_link('&lt; Older Entries') ?>
+      </div>
+      <div class="newer underline underline-offset-4 hover:opacity-50">
+        <?php previous_posts_link('Newer Entries &gt;') ?></div>
     </nav>
     <?php else : ?>
     <h2 class="center">Not Found</h2>
@@ -154,6 +156,34 @@
     <?php endif; ?>
   </section>
 
+
+  <section class="category-section">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-semibold mb-8">Explore Categories</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <?php
+        $categories = get_categories();
+
+        foreach ($categories as $category) {
+          $category_link = get_category_link($category->term_id);
+          $category_name = $category->name;
+          $category_description = $category->description;
+      ?>
+        <li class="border p-4 rounded shadow hover:bg-gray-100">
+          <a class="w-full h-full" href="<?php echo esc_url($category_link); ?>">
+            <h3 class="text-xl font-semibold">
+              <?php echo $category_name; ?>
+
+            </h3>
+            <?php if (!empty($category_description)) { ?>
+            <p class="text-gray-600"><?php echo $category_description; ?></p>
+            <?php } ?>
+          </a>
+        </li>
+        <?php } ?>
+      </ul>
+    </div>
+  </section>
 
 
 
