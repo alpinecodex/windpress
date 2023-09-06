@@ -29,8 +29,10 @@
                     Privacy Policy
                 </a>
             </div>
-
         </nav>
+        <div class="text-sm text-blue-300">
+            <p>Created by <a href="https://alpinecodex.com">Alpine Codex</a>. Code by <a href="https://coywolf.com/">Coywolf</a>, <a href="https://brijr.dev">Bridger Tower</a>, and <a href="https://cameronyoungblood.com">Cameron Youngblood</a>.</p>
+        </div>
     </div>
 </footer>
 
