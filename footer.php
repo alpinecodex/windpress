@@ -48,6 +48,22 @@
 <?php elseif (is_category()) : ?>
     <!-- Insert code on category pages -->
 <?php endif; ?>
+
+<script>
+    // JavaScript to handle mobile menu toggle
+    document.addEventListener("DOMContentLoaded", function() {
+        const showMenu = document.getElementById("show-menu");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        showMenu.addEventListener("change", function() {
+            if (showMenu.checked) {
+                mobileMenu.style.display = "block";
+            } else {
+                mobileMenu.style.display = "none";
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

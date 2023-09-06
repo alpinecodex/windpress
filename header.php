@@ -37,13 +37,28 @@ function curPageURL()
     <nav class="top-0 bg-blue-200 sticky z-50">
         <div class="flex justify-between items-center p-6 max-w-screen-lg m-auto">
             <!-- Site Logo -->
-            <a href="/"><img class="w-36" src=" <?php bloginfo('template_directory'); ?>/public/windpress.png" alt="Windpress Logo"></a>
-            <!-- Start mobile nav show and hide -->
+            <a href="/"><img class="w-36" src="<?php bloginfo('template_directory'); ?>/public/windpress.png" alt="Windpress Logo"></a>
+            <!-- Mobile Menu -->
             <div class="md:hidden">
-                <label for="show-menu" class="show-menu">&#9776;</label>
-                <input type="checkbox" id="show-menu" role="button">
+                <input type="checkbox" id="show-menu" role="button" class="hidden" checked> <!-- Add the "checked" attribute -->
+                <label for="show-menu" class="show-menu block cursor-pointer text-2xl">&#9776;</label>
+                <div class="mobile-menu md:hidden absolute top-0 left-0 bg-blue-100 h-screen w-64 transform translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto">
+                    <div class="p-8 space-y-4">
+                        <?php
+                        wp_nav_menu(array(
+                            'menu' => 'Main Nav',
+                            'container' => 'ul',
+                            'menu_class' => 'flex flex-col space-y-2',
+                        ));
+                        ?>
+                        <a href="https://alpinecodex.com/" class="block px-4 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                            Download Now
+                        </a>
+                    </div>
+                </div>
             </div>
-            <!-- End mobile nav show and hide -->
+            <!-- End Mobile Menu -->
+
             <div class="hidden md:flex gap-4 items-center">
                 <?php
                 wp_nav_menu(array(

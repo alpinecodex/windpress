@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
+<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-12 md:py-24">
     <article class="contain">
         <?php if (have_posts()) : while (have_posts()) :
                 the_post(); ?>
@@ -7,11 +7,11 @@
                 $cat_link = get_category_link($cat[0]->cat_ID); ?>
 
                 <header>
-                    <h1 class="font-medium mb-8"><?php the_title(); ?></h1>
+                    <h1 class="font-medium mb-8 text-3xl md:text-5xl"><?php the_title(); ?></h1>
                 </header>
 
                 <div class="flex flex-col gap-8"><?php if (has_post_thumbnail()) {
-                                                        the_post_thumbnail('full', array('class' => 'w-full h-[480px] object-cover object-center'));
+                                                        the_post_thumbnail('full', array('class' => 'w-full h-56 md:h-[480px] object-cover object-center'));
                                                     } else { ?>
                         <img class="w-full h-full" src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png" alt="<?php the_title(); ?>" />
                     <?php } ?>
