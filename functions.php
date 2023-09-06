@@ -68,5 +68,19 @@ function enqueue_theme_styles() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
 
+// /blog route
+
+function custom_blog_template($template) {
+	if (is_page('blog')) {
+			// Specify the path to your blog.php template file
+			$new_template = locate_template(array('blog.php'));
+			if (!empty($new_template)) {
+					return $new_template;
+			}
+	}
+	return $template;
+}
+add_filter('template_include', 'custom_blog_template');
+
 
 ?>
