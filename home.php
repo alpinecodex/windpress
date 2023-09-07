@@ -39,7 +39,7 @@
                             <?php if (has_post_thumbnail()) {
                                 the_post_thumbnail('full', array('class' => 'w-full h-96 object-cover'));
                             } else { ?>
-                                <img class="w-full h-full lg:w-[500px]" src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png" alt="<?php the_title(); ?>" />
+                                <img class="w-full h-96 object-cover" src="<?php bloginfo('template_directory'); ?>/public/fallback-image.png" alt="<?php the_title(); ?>" />
                             <?php } ?>
                             <div class="w-full z-10 h-full overflow-hidden group-hover:flex items-center justify-center hidden absolute top-0 bg-black bg-opacity-25">
                                 <p class="text-white flex gap-2 items-baseline">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
@@ -60,14 +60,12 @@
                 </a>
             <?php
             endwhile;
+            wp_reset_postdata();
         else :
             ?>
             <h2 class="center">Not Found</h2>
             <p>Sorry, but you are looking for something that isn't here.</p>
-        <?php
-        endif;
-        wp_reset_postdata();  // Reset the post data to the main query
-        ?>
+        <?php endif; ?>
     </section>
 
     <!-- Email Section -->
@@ -112,7 +110,7 @@
                             <?php if (has_post_thumbnail()) {
                                 the_post_thumbnail('full', array('class' => 'w-full h-56 object-cover'));
                             } else { ?>
-                                <img class="w-full h-full" src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png" alt="<?php the_title(); ?>" />
+                                <img class="w-full h-56 object-cover" src="<?php bloginfo('template_directory'); ?>/public/fallback-image.png" alt="<?php the_title(); ?>" />
                             <?php } ?>
                             <div class="w-full z-10 h-full overflow-hidden group-hover:flex items-center justify-center hidden absolute top-0 bg-black bg-opacity-25">
                                 <p class="text-white flex gap-2 items-baseline">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
