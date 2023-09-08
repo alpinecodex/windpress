@@ -33,7 +33,7 @@
 
 <body <?php body_class(); ?>>
     <nav class="top-0 bg-blue-200 sticky z-50">
-        <div class="flex justify-between items-center p-6 max-w-screen-lg m-auto">
+        <div class="flex justify-between items-center p-6">
             <!-- Site Logo -->
             <a href="/">
                 <img class="w-36" src="<?php bloginfo('template_directory'); ?>/public/windpress.png" alt="Windpress Logo">
