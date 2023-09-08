@@ -72,3 +72,18 @@ function enqueue_theme_styles()
     wp_enqueue_style('theme-style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
+
+class Custom_Nav_Walker extends Walker_Nav_Menu
+{
+    function start_lvl(&$output, $depth = 0, $args = null)
+    {
+        // Start the dropdown menu
+        $output .= '<ul class="dropdown-menu">';
+    }
+
+    function end_lvl(&$output, $depth = 0, $args = null)
+    {
+        // End the dropdown menu
+        $output .= '</ul>';
+    }
+}

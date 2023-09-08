@@ -32,7 +32,7 @@
                             <?php if (has_post_thumbnail()) {
                                 the_post_thumbnail('full', array('class' => 'w-full h-56 object-cover'));
                             } else { ?>
-                                <img class="w-full h-full" src="<?php bloginfo('template_directory'); ?>/images/fallback-image.png" alt="<?php the_title(); ?>" />
+                                <img class="w-full h-56 object-cover" src="<?php bloginfo('template_directory'); ?>/public/fallback-image.jpg" alt="<?php the_title(); ?>" />
                             <?php } ?>
                             <div class="w-full z-10 h-full overflow-hidden group-hover:flex items-center justify-center hidden absolute top-0 bg-black bg-opacity-25">
                                 <p class="text-white flex gap-2 items-baseline">Read More <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
