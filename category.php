@@ -71,5 +71,5 @@
 ?>
 </section>
 </main>
-s
+
 <?php get_footer(); ?>

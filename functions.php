@@ -87,3 +87,25 @@ class Custom_Nav_Walker extends Walker_Nav_Menu
         $output .= '</ul>';
     }
 }
+
+function custom_customize_register($wp_customize) {
+    // Add a section for Site Identity
+    $wp_customize->add_section('custom_site_identity', array(
+        'title'    => __('Logo', 'textdomain'),
+        'priority' => 30,
+    ));
+
+    // Add a control to upload a custom logo without cropping
+    $wp_customize->add_setting('custom_logo', array(
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'absint', // Ensure it's treated as an integer
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_logo', array(
+        'label'    => __('Site Logo', 'textdomain'),
+        'section'  => 'custom_site_identity',
+        'settings' => 'custom_logo',
+        'width' => 500
+    )));
+}
+add_action('customize_register', 'custom_customize_register');
