@@ -1268,6 +1268,10 @@ video {
   cursor: pointer;
 }
 
+.list-none{
+  list-style-type: none;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1605,31 +1609,6 @@ h5 {
 small,
 .text_small {
   font-size: 0.8rem;
-}
-
-/* Style Lists */
-
-article ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-article ol {
-  list-style: decimal;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-ol ul,
-ul ol,
-ul ul,
-ol ol {
-  margin-bottom: 0;
-}
-
-article li {
-  margin-bottom: calc(1rem / 2);
 }
 
 /* Style Tables */
@@ -2147,8 +2126,16 @@ em {
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
+
 .hover\:no-underline:hover{
   text-decoration-line: none;
+}
+
+.hover\:underline-offset-4:hover{
+  text-underline-offset: 4px;
 }
 
 .hover\:opacity-50:hover{

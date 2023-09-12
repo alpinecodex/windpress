@@ -15,18 +15,20 @@
             display: none;
             position: absolute;
             background-color: #fff;
-            /* White background */
+            padding: 0.5rem;
             z-index: 1000;
-            border: 1px solid #e2e8f0;
-            /* Gray border */
+            border-radius: 0.5rem;
             min-width: 200px;
-            /* Adjust as needed */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            /* Shadow for the dropdown */
         }
 
         .menu-item:hover .dropdown-menu {
             display: block;
+        }
+
+        .menu-item:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.2rem;
         }
     </style>
 </head>
@@ -56,9 +58,9 @@
                             <?php
                             wp_nav_menu(array(
                                 'menu' => 'Main Nav',
-                                'container' => 'ul',
-                                'menu_class' => 'flex flex-col space-y-2',
-                                'items_wrap' => '%3$s', // Remove <ul> container
+                                'container' => 'div',
+                                'menu_class' => 'flex flex-col space-y-2 list-none',
+                                'items_wrap' => '%3$s',
                             ));
                             ?>
                             <a href="https://alpinecodex.com/" class="block mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-900 text-white">
@@ -75,12 +77,12 @@
                 wp_nav_menu(array(
                     'menu' => 'Main Nav',
                     'container' => 'ul',
-                    'menu_class' => 'flex space-x-4 underline underline-offset-4',
-                    'items_wrap' => '%3$s', // Remove <ul> container
+                    'menu_class' => 'flex space-x-4',
+                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                     'walker' => new Custom_Nav_Walker(),
                 ));
                 ?>
-                <a href="https://alpinecodex.com/" class="hidden md:block px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                <a href="https://alpinecodex.com/windpress" class="hidden md:block px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
                     Download Now
                 </a>
             </div>

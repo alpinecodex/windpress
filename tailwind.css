@@ -57,31 +57,6 @@ small,
     font-size: 0.8rem;
 }
 
-/* Style Lists */
-
-article ul {
-    list-style: disc;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-article ol {
-    list-style: decimal;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-ol ul,
-ul ol,
-ul ul,
-ol ol {
-    margin-bottom: 0;
-}
-
-article li {
-    margin-bottom: calc(1rem / 2);
-}
-
 /* Style Tables */
 
 table {
