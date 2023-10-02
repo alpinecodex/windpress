@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="bg-blue-200">
+<section class="bg-main-200">
     <!-- Hero Section -->
     <div class="contain flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-12 md:py-24">
         <header class="flex flex-col gap-4">
@@ -10,7 +10,7 @@
                 <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>">
             <?php endif; ?>
 
-            <h1 class="text-blue-900 text-4xl md:text-6xl"><?php bloginfo('name'); ?></h1>
+            <h1 class="text-main-900 text-4xl md:text-6xl"><?php bloginfo('name'); ?></h1>
             <h2 class="text-lg md:text-xl lg:max-w-3/4 my-0"><?php bloginfo('description'); ?></h2>
         </header>
     </div>
@@ -72,7 +72,7 @@
     </section>
 
     <!-- Email Section -->
-    <section class="contain lg:flex gap-12 justify-between border border-blue-300 border-dashed p-4 md:p-8">
+    <section class="contain lg:flex gap-12 justify-between border border-main-300 border-dashed p-4 md:p-8">
         <div class="my-0">
             <h2 class="text-2xl mt-0 font-medium mb-4">Subscribe to Our Free Newsletter</h2>
             <p class="text-gray-600 mb-0">Stay up-to-date with our latest news and updates by signing up for the email
@@ -81,8 +81,8 @@
         </div>
         <div class="mt-6 lg:mt-0">
             <form class="flex h-fit max-w-full" action="your-submission-handler.php" method="post">
-                <input type="email" name="email" placeholder="Enter your email" required class="border px-4 py-2 focus:outline-none focus:ring focus:border-blue-300">
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
+                <input type="email" name="email" placeholder="Enter your email" required class="border px-4 py-2 focus:outline-none focus:ring focus:border-main-300">
+                <button type="submit" class="bg-main-500 text-white px-4 py-2 hover:bg-main-600 focus:outline-none focus:ring focus:border-main-300">Subscribe</button>
             </form>
             <small class="block ml-1 mt-2 text-neutral-400">No Spam, Ever.</small>
         </div>
@@ -158,7 +158,7 @@
                     $category_name = $category->name;
                     $category_description = $category->description;
                 ?>
-                    <li class="border p-4 hover:bg-blue-100">
+                    <li class="border p-4 hover:bg-main-100">
                         <a class="w-full h-full" href="<?php echo esc_url($category_link); ?>">
                             <h3 class="text-xl mt-2 font-semibold">
                                 <?php echo $category_name; ?>

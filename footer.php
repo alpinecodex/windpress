@@ -1,11 +1,11 @@
-<footer class="bg-blue-100">
+<footer class="bg-main-100">
     <div class="container flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-12 md:py-24">
         <!-- Subscribe Form -->
-        <div class="md:p-6 md:border border-blue-300 w-fit border-dashed">
+        <div class="md:p-6 md:border border-main-300 w-fit border-dashed">
             <h2 class="text-xl font-medium mt-0 mb-4">Subscribe to our free Newsletter</h2>
             <form class="md:flex h-fit max-w-full" action="your-submission-handler.php" method="post">
-                <input type="email" name="email" placeholder="Enter your email" required class="border px-4 py-2 w-full md:w-64 focus:outline-none focus:ring focus:border-blue-300 mb-2 md:mb-0">
-                <button type="submit" class="bg-blue-500 w-full md:w-36 text-white px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Subscribe</button>
+                <input type="email" name="email" placeholder="Enter your email" required class="border px-4 py-2 w-full md:w-64 focus:outline-none focus:ring focus:border-main-300 mb-2 md:mb-0">
+                <button type="submit" class="bg-main-500 w-full md:w-36 text-white px-4 py-2 hover:bg-main-600 focus:outline-none focus:ring focus:border-main-300">Subscribe</button>
             </form>
             <small class="block ml-1 mt-2 text-neutral-400">No Spam, Ever.</small>
         </div>
@@ -19,7 +19,7 @@
         // ));
         ?>
 
-        <nav class="lg:flex justify-between mt-8 text-blue-600">
+        <nav class="lg:flex justify-between mt-8 text-main-600">
             <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                 <?php
                 $custom_logo_id = get_theme_mod('custom_logo');
@@ -44,7 +44,7 @@
                 </a>
             </div>
         </nav>
-        <div class="text-sm text-blue-300">
+        <div class="text-sm text-main-300">
             <p>Created by <a href="https://alpinecodex.com">Alpine Codex</a>. Code by <a href="https://coywolf.com/">Coywolf</a>, <a href="https://brijr.dev">Bridger Tower</a>, and <a href="https://cameronyoungblood.com">Cameron Youngblood</a>.</p>
         </div>
     </div>

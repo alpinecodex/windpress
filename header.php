@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="max-w-screen">
+<html lang="en-US" class="max-w-screen text-text">
 
 <head>
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -12,7 +12,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <nav class="top-0 bg-blue-200 sticky z-50">
+    <nav class="top-0 bg-main-200 sticky z-50">
         <div class="flex justify-between items-center p-6">
             <!-- Site Logo -->
             <?php
@@ -37,7 +37,7 @@
                     </svg>
                 </label>
                 <input type="checkbox" id="show-menu-mobile" role="button" class="sr-only hidden p-0">
-                <div class="mobile-menu md:hidden absolute top-0 left-0 bg-blue-100 h-screen w-64 transform translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto" style="display: none;">
+                <div class="mobile-menu md:hidden absolute top-0 left-0 bg-main-100 h-screen w-64 transform translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto" style="display: none;">
                     <div class="p-8 space-y-4">
                         <?php
                         $custom_logo_id = get_theme_mod('custom_logo');
@@ -62,7 +62,7 @@
                                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                             ));
                             ?>
-                            <a href="https://alpinecodex.com/" class="block mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                            <a href="https://alpinecodex.com/" class="block mt-8 px-4 py-2 bg-main-600 hover:bg-main-900 text-white">
                                 Download Now
                             </a>
                         </div>
@@ -83,7 +83,7 @@
                     ));
                 }
                 ?>
-                <a href="https://alpinecodex.com/windpress" class="hidden md:block px-4 ml-2 py-2 bg-blue-600 hover:bg-blue-900 text-white">
+                <a href="https://alpinecodex.com/windpress" class="hidden md:block px-4 ml-2 py-2 bg-main-600 hover:bg-main-900 text-white">
                     Download Now
                 </a>
             </div>

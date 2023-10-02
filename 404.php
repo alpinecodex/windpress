@@ -7,7 +7,7 @@
         <div class="content">
             <p>Sorry, but the page you were trying to view does not exist.</p>
         </div>
-        <a href="/" class="text-blue-500 underline underline-offset-4">
+        <a href="/" class="text-main-500 underline underline-offset-4">
             Go Back to the Home Page </a>
     </article>
 </main>

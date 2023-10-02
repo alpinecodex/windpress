@@ -28,7 +28,7 @@
 
                 <hr class="my-12" />
 
-                <section class="my-12 prose prose-slate md:prose-lg lg:prose-xl prose-img:rounded-lg prose-headings:font-medium prose-a:text-blue-600">
+                <section class="my-12 prose prose-slate md:prose-lg lg:prose-xl prose-img:rounded-lg prose-headings:font-medium prose-a:text-main-600">
                     <?php the_content(); ?>
                 </section>
 
