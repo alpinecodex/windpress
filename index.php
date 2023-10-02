@@ -16,7 +16,7 @@
     </div>
 </section>
 
-<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24">
+<main class="flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-24 font-custom">
 
     <!-- Most Recent Post Section -->
     <section class="contain">

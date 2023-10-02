@@ -1,5 +1,5 @@
+/* Import your custom font here */
 @import url('https://fonts.googleapis.com/css?family=Manrope:400,500');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,11 +7,9 @@
 
 html {
     font-size: 100%;
-    font-family: 'Manrope', sans-serif;
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
     font-weight: 400;
 }
 
