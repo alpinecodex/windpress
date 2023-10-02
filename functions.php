@@ -83,8 +83,6 @@ function mytheme_setup()
 {
     // This function adds support for the custom logo feature.
     add_theme_support('custom-logo', array(
-        'height'      => 100,
-        'width'       => 500,
         'flex-height' => true,
         'flex-width'  => true,
     ));

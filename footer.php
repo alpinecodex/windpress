@@ -26,7 +26,7 @@
                 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
                 if ($logo) :
                 ?>
-                    <img src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+                    <img src="<?php echo esc_url($logo[0]); ?>" class="w-36" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
                 <?php else : ?>
                     <?php bloginfo('name'); ?>
                 <?php endif; ?>
@@ -44,8 +44,8 @@
                 </a>
             </div>
         </nav>
-        <div class="text-sm text-main-300">
-            <p>Created by <a href="https://alpinecodex.com">Alpine Codex</a>. Code by <a href="https://coywolf.com/">Coywolf</a>, <a href="https://brijr.dev">Bridger Tower</a>, and <a href="https://cameronyoungblood.com">Cameron Youngblood</a>.</p>
+        <div class="text-xs text-main-300">
+            <p>Created by <a href="https://alpinecodex.com">Alpine Codex</a>. Code by <a href="https://coywolf.com/">Coywolf</a>, <a href="https://bridger.to">Bridger Tower</a>, and <a href="https://cameronyoungblood.com">Cameron Youngblood</a>.</p>
         </div>
     </div>
 </footer>
