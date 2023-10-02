@@ -65,6 +65,7 @@ function disable_floc($headers)
 
 add_filter('wp_headers', 'disable_floc');
 
+// custom walker class
 class Custom_Nav_Walker extends Walker_Nav_Menu
 {
     function start_lvl(&$output, $depth = 0, $args = null)
@@ -76,32 +77,11 @@ class Custom_Nav_Walker extends Walker_Nav_Menu
     {
         $output .= '</ul>';
     }
-
-    static function custom_customize_register($wp_customize)
-    {
-        $wp_customize->add_section('custom_site_identity', array(
-            'title'    => __('Logo', 'textdomain'),
-            'priority' => 30,
-        ));
-
-        $wp_customize->add_setting('custom_logo', array(
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'absint',
-        ));
-
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_logo', array(
-            'label'    => __('Site Logo', 'textdomain'),
-            'section'  => 'custom_site_identity',
-            'settings' => 'custom_logo',
-            'width' => 500
-        )));
-    }
 }
 
-add_action('customize_register', array('Custom_Nav_Walker', 'custom_customize_register'));
-
-function custom_customize_register($wp_customize)
+function mytheme_setup()
 {
+    // This function adds support for the custom logo feature.
     add_theme_support('custom-logo', array(
         'height'      => 100,
         'width'       => 400,
@@ -109,7 +89,7 @@ function custom_customize_register($wp_customize)
         'flex-width'  => true,
     ));
 }
-add_action('after_setup_theme', 'custom_customize_register');
+add_action('after_setup_theme', 'mytheme_setup');
 
 // Enqueue styles
 function enqueue_theme_styles()

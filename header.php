@@ -15,15 +15,19 @@
     <nav class="top-0 bg-blue-200 sticky z-50">
         <div class="flex justify-between items-center p-6">
             <!-- Site Logo -->
-            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <?php
-                if (has_custom_logo()) :
-                    the_custom_logo();
-                else :
-                    bloginfo('name');
-                endif;
-                ?>
-            </a>
+            <?php
+            $custom_logo_id = get_theme_mod('custom_logo');
+            $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+            if ($logo) :
+            ?>
+                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                    <img src="<?php echo esc_url($logo[0]); ?>" class="w-36" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+                </a>
+            <?php else : ?>
+                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                    <?php bloginfo('name'); ?>
+                </a>s
+            <?php endif; ?>
 
             <!-- Mobile Menu -->
             <div class="block md:hidden p-0">
@@ -35,17 +39,19 @@
                 <input type="checkbox" id="show-menu-mobile" role="button" class="sr-only hidden p-0">
                 <div class="mobile-menu md:hidden absolute top-0 left-0 bg-blue-100 h-screen w-64 transform translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto" style="display: none;">
                     <div class="p-8 space-y-4">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                            <?php
-                            $custom_logo_id = get_theme_mod('custom_logo');
-                            $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-                            if ($logo) :
-                            ?>
+                        <?php
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                        if ($logo) :
+                        ?>
+                            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                                 <img src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
-                            <?php else : ?>
+                            </a>
+                        <?php else : ?>
+                            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                                 <?php bloginfo('name'); ?>
-                            <?php endif; ?>
-                        </a>
+                            </a>s
+                        <?php endif; ?>
 
                         <div class="py-8">
                             <?php
