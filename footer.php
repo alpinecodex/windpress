@@ -33,13 +33,13 @@
             </a>
 
             <div class="flex gap-4">
-                <a class="underline underline-offset-4 hover:opacity-50" href="/" target="_blank" rel="noopener noreferrer">
+                <a class="underline underline-offset-4 hover:opacity-50" href="/terms-of-use" target="_blank" rel="noopener noreferrer">
                     Terms of Use
                 </a>
-                <a class="underline underline-offset-4 hover:opacity-50" href="/" target="_blank" rel="noopener noreferrer">
+                <a class="underline underline-offset-4 hover:opacity-50" href="/cookies" target="_blank" rel="noopener noreferrer">
                     Cookies
                 </a>
-                <a class="underline underline-offset-4 hover:opacity-50" href="/" target="_blank" rel="noopener noreferrer">
+                <a class="underline underline-offset-4 hover:opacity-50" href="/privacy-policy" target="_blank" rel="noopener noreferrer">
                     Privacy Policy
                 </a>
             </div>
