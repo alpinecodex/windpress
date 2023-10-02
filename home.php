@@ -4,11 +4,7 @@
     <!-- Hero Section -->
     <div class="contain flex flex-col m-auto gap-8 max-w-screen-lg px-6 py-12 md:py-24">
         <header class="flex flex-col gap-4">
-            <?php $logo_url = get_theme_mod('custom_logo'); // Retrieve the logo URL
-            ?>
-            <?php if (!empty($logo_url)) : ?>
-                <img src="<?php echo esc_url($logo_url); ?>" alt="<?php bloginfo('name'); ?>">
-            <?php endif; ?>
+
 
             <h1 class="text-main-900 text-4xl md:text-6xl"><?php bloginfo('name'); ?></h1>
             <h2 class="text-lg md:text-xl lg:max-w-3/4 my-0"><?php bloginfo('description'); ?></h2>
