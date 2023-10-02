@@ -65,47 +65,55 @@ function disable_floc($headers)
 
 add_filter('wp_headers', 'disable_floc');
 
-// styles
-
-function enqueue_theme_styles()
-{
-    wp_enqueue_style('theme-style', get_template_directory_uri() . '/style.css');
-}
-add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
-
 class Custom_Nav_Walker extends Walker_Nav_Menu
 {
     function start_lvl(&$output, $depth = 0, $args = null)
     {
-        // Start the dropdown menu
         $output .= '<ul class="dropdown-menu">';
     }
 
     function end_lvl(&$output, $depth = 0, $args = null)
     {
-        // End the dropdown menu
         $output .= '</ul>';
+    }
+
+    static function custom_customize_register($wp_customize)
+    {
+        $wp_customize->add_section('custom_site_identity', array(
+            'title'    => __('Logo', 'textdomain'),
+            'priority' => 30,
+        ));
+
+        $wp_customize->add_setting('custom_logo', array(
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'absint',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_logo', array(
+            'label'    => __('Site Logo', 'textdomain'),
+            'section'  => 'custom_site_identity',
+            'settings' => 'custom_logo',
+            'width' => 500
+        )));
     }
 }
 
-function custom_customize_register($wp_customize) {
-    // Add a section for Site Identity
-    $wp_customize->add_section('custom_site_identity', array(
-        'title'    => __('Logo', 'textdomain'),
-        'priority' => 30,
-    ));
+add_action('customize_register', array('Custom_Nav_Walker', 'custom_customize_register'));
 
-    // Add a control to upload a custom logo without cropping
-    $wp_customize->add_setting('custom_logo', array(
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'absint', // Ensure it's treated as an integer
+function custom_customize_register($wp_customize)
+{
+    add_theme_support('custom-logo', array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
     ));
-
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_logo', array(
-        'label'    => __('Site Logo', 'textdomain'),
-        'section'  => 'custom_site_identity',
-        'settings' => 'custom_logo',
-        'width' => 500
-    )));
 }
-add_action('customize_register', 'custom_customize_register');
+add_action('after_setup_theme', 'custom_customize_register');
+
+// Enqueue styles
+function enqueue_theme_styles()
+{
+    wp_enqueue_style('theme-style', get_template_directory_uri() . '/style.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_theme_styles');

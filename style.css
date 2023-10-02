@@ -1065,6 +1065,10 @@ video {
   border-width: 0;
 }
 
+.static{
+  position: static;
+}
+
 .absolute{
   position: absolute;
 }
@@ -1496,11 +1500,6 @@ video {
 
 .italic{
   font-style: italic;
-}
-
-.text-black{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-blue-300{
